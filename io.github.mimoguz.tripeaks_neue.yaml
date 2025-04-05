@@ -19,16 +19,18 @@ modules:
       - chmod +x /app/tripeaks_neue/tripeaks_neue
       - mkdir -p /app/bin
       - ln -s /app/tripeaks_neue/tripeaks_neue /app/bin/tripeaks_neue
-      - desktop-file-edit git_repo/linux/flatpak/io.github.mimoguz.tripeaks_neue.desktop --set-icon=${FLATPAK_ID}
+      - desktop-file-edit git_repo/linux/flatpak/io.github.mimoguz.tripeaks_neue.desktop
+        --set-icon=${FLATPAK_ID}
       - install -Dm644 -t "${FLATPAK_DEST}/share/applications/" git_repo/linux/flatpak/io.github.mimoguz.tripeaks_neue.desktop
       - install -Dm644 git_repo/linux/flatpak/icon.svg "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
-      - install -Dm644 git_repo/linux/flatpak/io.github.mimoguz.tripeaks_neue.metainfo.xml /app/share/appdata/${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 git_repo/linux/flatpak/io.github.mimoguz.tripeaks_neue.metainfo.xml
+        /app/share/appdata/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
         only-arches: [x86_64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/0.8.3/tripeaksneue-linux-x86_64.tar.gz
-        sha256: 0542b662c01fdef9fb9ae82d61f78a2a741af17ba47600ab3993e82cf6cec968
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.8.4/tripeaksneue-linux-x86_64.tar.gz
+        sha256: 1c02f296a852c5d4706959cce25c1af1af71897e9c009bf048c54c8cad2ae552
         x-checker-data:
           type: json
           url: https://api.github.com/repos/mimoguz/tripeaks_neue/releases/latest
@@ -39,8 +41,8 @@ modules:
       - type: archive
         only-arches: [aarch64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/0.8.3/tripeaksneue-linux-aarch64.tar.gz
-        sha256: 291f0e7ccb72b4024576da500a2ca529e06029a01b7ca3dd171e51ae9f4680c3
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.8.4/tripeaksneue-linux-aarch64.tar.gz
+        sha256: 0a77615312e996dd7fba3df18246ff38b506280c632c5e55540f1f73ca864fc1
         x-checker-data:
           type: json
           url: https://api.github.com/repos/mimoguz/tripeaks_neue/releases/latest
@@ -51,8 +53,8 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
-        tag: 0.8.3
-        commit: ad95fdc1d5d9bbc06210695ff9da9d4a1e4a2e86
+        tag: v0.8.4
+        commit: 6199441736c29b3dcbdddaf7418ee43b111fb087
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
