@@ -53,8 +53,8 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
-        tag: v0.9.0
-        commit: 951618fe085c026b01c61f4d8d9a3d468dd4a356
+        tag: v0.9.1
+        commit: 8d32cadbf68bf2fff444011ff8dd05a72bfabc58
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
