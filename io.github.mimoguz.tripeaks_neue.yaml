@@ -29,8 +29,8 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.1/tripeaksneue-linux-x86_64.tar.gz
-        sha256: b8790342263376c07270873fef94baf18a6d4986b5ebde2ad025a0df03b07a87
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.2/tripeaksneue-linux-x86_64.tar.gz
+        sha256: 9f208ec5be62818e0926dad4e29a586ceb949b0a1d5ee4362717a4beed575020
         x-checker-data:
           type: json
           url: https://api.github.com/repos/mimoguz/tripeaks_neue/releases/latest
@@ -41,8 +41,8 @@ modules:
       - type: archive
         only-arches: [aarch64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.1/tripeaksneue-linux-aarch64.tar.gz
-        sha256: 559787485bd6099a4b339ee25457e4c8198776234afad82a3fbd84a0861733eb
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.2/tripeaksneue-linux-aarch64.tar.gz
+        sha256: 21881f9a2b8089b9486f68d37f0dbb5283cf608f49507c7fb145df534fbf9749
         x-checker-data:
           type: json
           url: https://api.github.com/repos/mimoguz/tripeaks_neue/releases/latest
@@ -53,8 +53,8 @@ modules:
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
-        tag: v0.9.1
-        commit: 8d32cadbf68bf2fff444011ff8dd05a72bfabc58
+        tag: v0.9.2
+        commit: 79670f83ad0aea7cdec6cfe326c29e47907bc98a
         x-checker-data:
           type: git
           tag-pattern": ^v([0-9.]+)$
