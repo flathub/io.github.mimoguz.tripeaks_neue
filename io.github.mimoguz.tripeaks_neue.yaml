@@ -51,7 +51,7 @@ modules:
           version-query: $tag | sub("^[vV]"; "")
           url-query: '"https://github.com/mimoguz/tripeaks_neue/releases/download/\($tag)/tripeaksneue-linux-aarch64.tar.gz"'
       - type: patch
-        paths: patches/0001-Fix-the-screenshot.patch
+        path: patches/0001-Fix-the-screenshot.patch
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
