@@ -13,40 +13,17 @@ finish-args:
   - --socket=pulseaudio
 
 modules:
-  - name: ogg
-    buildsystem: cmake-ninja
-    config-opts:
-    - -DBUILD_EXAMPLES=OFF
-    - -DBUILD_TESTING=OFF
-    - -DBUILD_DOCS=OFF
-    - -DCMAKE_BUILD_TYPE=Release
-    sources:
-      - type: archive
-        url: https://github.com/xiph/ogg/releases/download/v1.3.6/libogg-1.3.6.tar.gz
-        sha256: 83e6704730683d004d20e21b8f7f55dcb3383cdf84c0daedf30bde175f774638
-      
-  - name: vorbis
-    buildsystem: cmake-ninja
-    config-opts:
-    - -DBUILD_EXAMPLES=OFF
-    - -DBUILD_TESTING=OFF
-    - -DBUILD_DOCS=OFF
-    - -DCMAKE_BUILD_TYPE=Release
-    - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-    sources:
-      - type: archive
-        url: https://github.com/xiph/vorbis/releases/download/v1.3.7/libvorbis-1.3.7.tar.gz
-        sha256: 0e982409a9c3fc82ee06e08205b1355e5c6aa4c36bca58146ef399621b0ce5ab
 
   - name: flac
     buildsystem: cmake
     config-opts:
-      - -DBUILD_PROGRAMS=OFF
-      - -DBUILD_EXAMPLES=OFF
-      - -DBUILD_TESTING=OFF
-      - -DBUILD_DOCS=OFF
-      - -DINSTALL_MANPAGES=OFF
-      - -DBUILD_SHARED_LIBS=ON
+      - -DBUILD_CXXLIBS=off
+      - -DBUILD_DOCS=off
+      - -DBUILD_EXAMPLES=off
+      - -DBUILD_PROGRAMS=off
+      - -DBUILD_SHARED_LIBS=on
+      - -DBUILD_TESTING=off
+      - -DINSTALL_MANPAGES=off
     sources:
       - type: archive
         url: https://github.com/xiph/flac/releases/download/1.4.3/flac-1.4.3.tar.xz
@@ -71,30 +48,13 @@ modules:
         dest: tripeaks_neue
         url: https://github.com/mimoguz/tripeaks_neue/releases/download/0.9.5-pre/tripeaksneue-linux-x86_64.tar.gz
         sha256: aab8cf6c67f6bca092c6f9048eb7c9203d41d50d897bd108a2491d166e3ed4cb
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/mimoguz/tripeaks_neue/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/mimoguz/tripeaks_neue/releases/download/\($tag)/tripeaksneue-linux-x86_64.tar.gz"'
       - type: archive
         only-arches: [aarch64]
         dest: tripeaks_neue
         url: https://github.com/mimoguz/tripeaks_neue/releases/download/0.9.5-pre/tripeaksneue-linux-aarch64.tar.gz
         sha256: e7a58ac4f1ab93d86b6572cd9795d72e397b9dd84528dd35af6dcbe3e6f75c74
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/mimoguz/tripeaks_neue/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/mimoguz/tripeaks_neue/releases/download/\($tag)/tripeaksneue-linux-aarch64.tar.gz"'
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
         tag: 0.9.5-pre
         commit: fc282a296cb023a145150ceccc096aed9118b490
-        x-checker-data:
-          type: git
-          tag-pattern": ^v([0-9.]+)$
