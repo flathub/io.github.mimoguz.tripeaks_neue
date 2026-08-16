@@ -13,22 +13,6 @@ finish-args:
   - --socket=pulseaudio
 
 modules:
-
-  - name: flac
-    buildsystem: cmake
-    config-opts:
-      - -DBUILD_CXXLIBS=off
-      - -DBUILD_DOCS=off
-      - -DBUILD_EXAMPLES=off
-      - -DBUILD_PROGRAMS=off
-      - -DBUILD_SHARED_LIBS=on
-      - -DBUILD_TESTING=off
-      - -DINSTALL_MANPAGES=off
-    sources:
-      - type: archive
-        url: https://github.com/xiph/flac/releases/download/1.4.3/flac-1.4.3.tar.xz
-        sha256: 6c58e69cd22348f441b861092b825e591d0b822e106de6eb0ee4d05d27205b70
-
   - name: tripeaks_neue
     buildsystem: simple
     build-commands:
@@ -46,15 +30,15 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.5/tripeaksneue-linux-x86_64.tar.gz
-        sha256: 7f817b79a480fec3b3a3175d39e1b264d7a0b2227e6bcfa4ea9ee67915a172ad
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.60/tripeaksneue-linux-x86_64.tar.gz
+        sha256: 97a45200dadc6bcea0e4a8979271a50bec36341e3274d391ff3d7a73fb6dab96
       - type: archive
         only-arches: [aarch64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.5/tripeaksneue-linux-aarch64.tar.gz
-        sha256: c3a0eced1dfa98f8de6ca0549552dd3ae792df2af09f66a61a42cd454b27f60d
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.60/tripeaksneue-linux-aarch64.tar.gz
+        sha256: 8610514044c66722389dc0b59f48da61f87205b10eb800b862af46591061afd9
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
-        tag: v0.9.5
-        commit: 7d5d135071a290f053d0d9f0994c596c314e0a38
+        tag: v0.9.60
+        commit: 037607f6afe5287e73473aeda7f5461f49a89eef
