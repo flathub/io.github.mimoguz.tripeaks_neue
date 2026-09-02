@@ -36,7 +36,7 @@ modules:
         only-arches: [aarch64]
         dest: tripeaks_neue
         url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.61/tripeaksneue-linux-aarch64.tar.gz
-        sha256: sha256:c04575e58ed1345478db8b109df8e6b4c562a98212e9e8e29088de7e2e9b48b6
+        sha256: c04575e58ed1345478db8b109df8e6b4c562a98212e9e8e29088de7e2e9b48b6
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
