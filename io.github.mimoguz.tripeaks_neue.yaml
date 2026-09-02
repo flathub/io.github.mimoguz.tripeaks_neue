@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/flatpak/flatpak-builder/master/data/flatpak-manifest.schema.json
 app-id: io.github.mimoguz.tripeaks_neue
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08' 
 sdk: org.freedesktop.Sdk
 command: tripeaks_neue
 separate-locales: false
@@ -30,15 +30,15 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.60/tripeaksneue-linux-x86_64.tar.gz
-        sha256: 97a45200dadc6bcea0e4a8979271a50bec36341e3274d391ff3d7a73fb6dab96
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.61/tripeaksneue-linux-x86_64.tar.gz
+        sha256: 320bbc73d602a03e140f8876f7ea8bcc23afe125dff5cf629bb7dcf318fefd1a
       - type: archive
         only-arches: [aarch64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.60/tripeaksneue-linux-aarch64.tar.gz
-        sha256: 8610514044c66722389dc0b59f48da61f87205b10eb800b862af46591061afd9
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.61/tripeaksneue-linux-aarch64.tar.gz
+        sha256: sha256:c04575e58ed1345478db8b109df8e6b4c562a98212e9e8e29088de7e2e9b48b6
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
-        tag: v0.9.60
-        commit: 037607f6afe5287e73473aeda7f5461f49a89eef
+        tag: v0.9.61
+        commit: 63aec9b6156a041b07a23614ecfe91baa9144ce3
