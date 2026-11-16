@@ -30,15 +30,15 @@ modules:
       - type: archive
         only-arches: [x86_64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.66/tripeaksneue-linux-x86_64.tar.gz
-        sha256: 2f51a0149d1944bff6de9317edce105426c5be3b739827f3590dba4890db1b76
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/patch-0.9.66-b/tripeaksneue-linux-x86_64.tar.gz
+        sha256: 228fe74e3c8dda7f8acda662a3678758c70b46f11ca884163c9f30660a6a640a
       - type: archive
         only-arches: [aarch64]
         dest: tripeaks_neue
-        url: https://github.com/mimoguz/tripeaks_neue/releases/download/v0.9.66/tripeaksneue-linux-aarch64.tar.gz
-        sha256: 30cdf63f47a7cd6aca4f6cc80a70ce775abfc2c51c0dad58fdf9c36fd384849c
+        url: https://github.com/mimoguz/tripeaks_neue/releases/download/patch-0.9.66-b/tripeaksneue-linux-aarch64.tar.gz
+        sha256: 068fffdd548f21137e9083237f473d4fa622703bd8a39db2979430b45b721f88
       - type: git
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
-        tag: v0.9.66
-        commit: 4f53d41a68be25c76ae20ae3fbd1cf16c6e4424b
+        tag: patch-0.9.66-b
+        commit: 4a6f68801ad75e6c758323408ac125de857654f8
