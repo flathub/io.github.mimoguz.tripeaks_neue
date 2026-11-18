@@ -41,4 +41,4 @@ modules:
         dest: git_repo
         url: https://github.com/mimoguz/tripeaks_neue
         tag: patch-0.9.66-c
-        commit: a29ac4ebbd4748de04f10b67c27ef4c34fbff7e8
+        commit: f5f17d38d418cd04f890cab0a8da1ebfa36b5117
